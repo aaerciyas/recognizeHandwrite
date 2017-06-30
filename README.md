@@ -1,2 +1,0 @@
-# recognizeHandwrite
-opencv and scikitlearn
