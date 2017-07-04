@@ -24,4 +24,4 @@ for image in digits:
 model = LinearSVC(random_state = 42)
 model.fit(data,target)
 
-joblib.dump(model, "model.cpickle")
+joblib.dump(model, args["model"])

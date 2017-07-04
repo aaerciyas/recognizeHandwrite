@@ -1,7 +1,8 @@
 from skimage import feature
 
 class HOG:
-    def __init__(self,orientations= 11, pixelsPerCell=(7,7),cellsPerBlock = (3,3),normalize = False):
+    def __init__(self, orientations, pixelsPerCell,
+cellsPerBlock , normalize = False):
         self.orientations = orientations
         self.pixelsPerCell = pixelsPerCell
         self.cellsPerBlock = cellsPerBlock

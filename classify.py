@@ -19,7 +19,7 @@ hog = HOG(orientations = 18, pixelsPerCell = (10, 10),
 cellsPerBlock = (1, 1), normalize = True)
 
 image = cv2.imread(args["image"])
-image = cvision.reSize(image,width=350)
+image = cvision.reSize(image,width=400)
 
 gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 edged = cvision.cannyDetection(image, (5,5), 30,150)
@@ -31,7 +31,7 @@ for(c, _) in counts:
     #karelerin alanlarini hesaplamakta
     (x, y, w, h) = cv2.boundingRect(c)
 
-    if w>=7 and h>=20:
+    if w>=5 and h>=18:
         #region of interest
         roi = gray[y:y + h, x:x + w]
         thresh = roi.copy()
